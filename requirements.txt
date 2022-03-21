@@ -1,0 +1,6 @@
+browserstack-local
+paver
+selenium
+pytest
+pytest-variables
+pytest-selenium

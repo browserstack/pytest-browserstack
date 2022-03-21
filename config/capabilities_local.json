@@ -1,0 +1,13 @@
+{ 
+  "capabilities": {
+    "bstack:options" : {
+      "os" : "OS X",
+      "osVersion" : "Monterey",
+      "sessionName" : "OSX Monterey Chrome Latest - Local Test",
+      "local" : "false",
+      "seleniumVersion" : "4.1.2"
+    },
+    "browserName" : "Chrome",
+    "browserVersion" : "latest"
+  }
+}
