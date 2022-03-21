@@ -1,14 +1,12 @@
 
 { 
   "capabilities": {
-    "bstack:options" : {
-      "os" : "OS X",
-      "osVersion" : "Monterey",
-      "sessionName" : "OSX Monterey Chrome Latest - Sample Test",
-      "local" : "false",
-      "seleniumVersion" : "4.1.2"
-    },
-    "browserName" : "Chrome",
-    "browserVersion" : "latest"
+    "os" : "OS X",
+    "os_version" : "Monterey",
+    "browser" : "Chrome",
+    "browser_version" : "latest",
+    "name" : "OSX Monterey Chrome Latest - Sample Test",
+    "browserstack.local" : "false",
+    "browserstack.selenium_version" : "3.14.0"
   }
 }

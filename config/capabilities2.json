@@ -1,14 +1,12 @@
 
 { 
   "capabilities": {
-    "bstack:options" : {
-      "os" : "OS X",
-      "osVersion" : "Big Sur",
-      "sessionName" : "OSX Big Sure Safari 14.1 - Sample Test",
-      "local" : "false",
-      "seleniumVersion" : "4.1.2"
-    },
-    "browserName" : "Safari",
-    "browserVersion" : "14.1"
+    "os" : "OS X",
+    "os_version" : "Big Sur",
+    "browser" : "Safari",
+    "browser_version" : "14.1",
+    "name" : "iPhone 12 Pro Max - Sample Test",
+    "browserstack.local" : "false",
+    "browserstack.selenium_version" : "3.14.0"
   }
 }

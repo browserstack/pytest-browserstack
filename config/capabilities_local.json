@@ -1,13 +1,11 @@
 { 
   "capabilities": {
-    "bstack:options" : {
-      "os" : "OS X",
-      "osVersion" : "Monterey",
-      "sessionName" : "OSX Monterey Chrome Latest - Local Test",
-      "local" : "false",
-      "seleniumVersion" : "4.1.2"
-    },
-    "browserName" : "Chrome",
-    "browserVersion" : "latest"
+    "os" : "OS X",
+    "os_version" : "Big Sur",
+    "browser" : "Safari",
+    "browser_version" : "14.1",
+    "name" : "OSX Big Sur Safari - Local Test",
+    "browserstack.local" : "true",
+    "browserstack.selenium_version" : "3.14.0"
   }
 }

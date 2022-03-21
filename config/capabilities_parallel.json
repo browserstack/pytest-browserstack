@@ -2,45 +2,37 @@
 { 
   "capabilities1":
   {
-    "bstack:options" : {
-        "osVersion" : "11.0",
-        "deviceName" : "Samsung Galaxy S21",
-        "realMobile" : "true",
-        "sessionName" : "Android Samsung Galaxy S21 - Sample Test",
-        "local" : "false"
-    },
-    "browserName" : "samsung"
+    "os_version" : "11.0",
+    "device" : "Samsung Galaxy S21",
+    "real_mobile" : "true",
+    "name" : "Android Samsung Galaxy S21 - Sample Test",
+    "browserstack.local" : "false",
+    "browser" : "samsung"
   },
   "capabilities2":
   {
-    "bstack:options" : {
-        "osVersion" : "14",
-        "deviceName" : "iPhone 12 Pro Max",
-        "realMobile" : "true",
-        "sessionName" : "iPhone 12 Pro Max - Sample Test",
-        "local" : "false"
-    }
+    "os_version" : "14",
+    "device" : "iPhone 12 Pro Max",
+    "real_mobile" : "true",
+    "name" : "iPhone 12 Pro Max - Sample Test",
+    "browserstack.local" : "false"
   },
   "capabilities3":{
-    "bstack:options" : {
-        "os" : "OS X",
-        "osVersion" : "Monterey",
-        "sessionName" : "OSX Monterey Chrome Latest - Sample Test",
-        "local" : "false",
-        "seleniumVersion" : "4.1.2"
-    },
-    "browserName" : "Chrome",
-    "browserVersion" : "latest"
+    "os" : "OS X",
+    "os_version" : "Monterey",
+    "browser" : "Chrome",
+    "browser_version" : "latest",
+    "name" : "OSX Monterey Chrome Latest - Sample Test",
+    "browserstack.local" : "false",
+    "browserstack.selenium_version" : "3.14.0"
   },
   "capabilities4": {
-    "bstack:options" : {
-        "os" : "OS X",
-        "osVersion" : "Big Sur",
-        "sessionName" : "OSX Big Sure Safari 14.1 - Sample Test",
-        "local" : "false",
-        "seleniumVersion" : "4.1.2"
-    },
-    "browserName" : "Safari",
-    "browserVersion" : "14.1"
+    "os" : "OS X",
+    "os_version" : "Big Sur",
+    "browser" : "Safari",
+    "browser_version" : "14.1",
+    "name" : "iPhone 12 Pro Max - Sample Test",
+    "browserstack.local" : "false",
+    "browserstack.selenium_version" : "3.14.0"
   }
 }
