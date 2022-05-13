@@ -16,6 +16,8 @@ PyTest Integration with BrowserStack.
 ## Running your single tests
 * To run single tests, run `pytest --driver BrowserStack --variables config/capabilities1.json`
 
+## Running your local tests
+* To run local tests, run `pytest --driver BrowserStack --variables config/capabilities_local.json`
 
 ## Running your parallel tests
 * To run parallel tests, run `paver run parallel`
