@@ -5,6 +5,7 @@
     "os_version" : "Monterey",
     "browser" : "Chrome",
     "browser_version" : "latest",
+    "build" : "PyTest Example Project",
     "name" : "OSX Monterey Chrome Latest - Sample Test",
     "browserstack.local" : "false",
     "browserstack.selenium_version" : "3.14.0"

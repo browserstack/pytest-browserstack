@@ -1,4 +1,5 @@
-# .vscode
-# __pycache__
-# __pycache__/conftest.cpython-38-pytest-7.1.1.pyc
-# .pytest_cache
+.vscode
+__pycache__
+__pycache__/conftest.cpython-38-pytest-7.1.1.pyc
+.pytest_cache
+local.log
