@@ -1,0 +1,12 @@
+{ 
+  "capabilities": {
+    "os" : "OS X",
+    "os_version" : "Monterey",
+    "browser" : "Chrome",
+    "browser_version" : "latest",
+    "build" : "PyTest Example Project",
+    "name" : "OSX Monterey Chrome Latest - Local Test",
+    "browserstack.local" : "true",
+    "browserstack.selenium_version" : "3.14.0"
+  }
+}
