@@ -18,7 +18,7 @@ PyTest Integration with BrowserStack.
 
 ## Running your local tests
 * To run a local test, first go to tests/test_local.py then edit BROWSERSTACK_ACCESS_KEY on line 11 and edit BROWSERSSTACK_USER_NAME and BROWSERSTACK_ACCESS_KEY on line 33
-* Run `pytest tests/test_local.py --driver BrowserStack --variables config/local.json`
+* Run `pytest tests/test_local.py --driver BrowserStack`
 
 ## Running your parallel tests
 * To run parallel tests, run `pytest tests/test_parallel.py -n 3 --driver BrowserStack --variables config/capability.json`
