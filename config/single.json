@@ -1,0 +1,14 @@
+
+{ 
+    "capabilities": {
+      "os" : "OS X",
+      "os_version" : "Monterey",
+      "browser" : "Chrome",
+      "browser_version" : "latest",
+      "build" : "pytest-browserstack",
+      "name" : "single_test",
+      "browserstack.local" : "false",
+      "browserstack.selenium_version" : "3.14.0"
+    }
+  }
+  

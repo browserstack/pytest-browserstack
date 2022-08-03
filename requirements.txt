@@ -1,6 +1,7 @@
 browserstack-local
 paver
 selenium
+psutil
 pytest
 pytest-variables
 pytest-selenium
