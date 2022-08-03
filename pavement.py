@@ -16,16 +16,17 @@ setup(
     packages=['tests']
 )
 
-def run_py_test(config):
-    sh('pytest tests/%s.py --driver BrowserStack --variables config/%s.json' % (config,config))
-
 @task
 @consume_nargs(1)    
 def run(args):
     """Run single, local and parallel test using different config."""
-    if args[0] in ('single', 'parallel'):
-        run_py_test(args[0])
-    elif args[0] == 'local':
-        sh('pytest tests/local/local.py --driver BrowserStack --variables config/local.json')
+    commands = {
+        "single":'pytest tests/single.py --driver BrowserStack --variables config/single.json',
+        "parallel":'pytest tests/parallel.py -n 3 --driver BrowserStack --variables config/parallel.json',
+        'local':'pytest tests/local/local.py --driver BrowserStack --variables config/local.json'
+    }
+    if commands[args[0]]:
+        sh(commands[args[0]])
+        
         
     
