@@ -11,7 +11,7 @@ PyTest Integration with BrowserStack.
 
 * Clone the repo
 * Install dependencies `pip install -r requirements.txt`
-* Update `.browserstack` files with your [BrowserStack Username and Access Key](https://www.browserstack.com/accounts/settings)
+* To run your automated tests using BrowserStack, you must provide a valid username and access key. This can be done either by using a .browserstack configuration file in the working directory or your home directory, or by setting the BROWSERSTACK_USERNAME and BROWSERSTACK_ACCESS_KEY environment variables.
 
 ## Running your single tests
 * To run single tests, run `paver run single`
