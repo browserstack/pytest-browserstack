@@ -31,9 +31,7 @@
             "bstack:options": {
                 "osVersion" : "10.0",
                 "deviceName" : "Samsung Galaxy S20"
-            },
-            "browserName": "firefox",
-            "browserVersion": "latest"
+            }
         }
     ]
 }
