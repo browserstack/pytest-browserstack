@@ -1,23 +1,19 @@
 {
     "capabilities": {
-        "bstack:options": {
-            "projectName": "Pytest Browserstack",
-            "buildName": "pytest-browserstack",
-            "sessionName": "single_test",
-            "local": false,
-            "debug" : "true",
-            "networkLogs": "true",
-            "seleniumVersion": "3.14.0"
-        }
+        "project": "Pytest Browserstack",
+        "build": "pytest-browserstack",
+        "name": "single_test",
+        "browserstack.local": false,
+        "browserstack.debug": "true",
+        "browserstack.networkLogs": "true",
+        "browserstack.selenium_version": "3.14.0"
     },
     "environments": [
         {
-            "bstack:options": {
-                "os": "Windows",
-                "osVersion": "11"
-            },
-            "browserName": "chrome",
-            "browserVersion": "latest"
+            "os": "Windows",
+            "os_version": "11",
+            "browser": "Chrome",
+            "browser_version": "latest"
         }
     ]
 }

@@ -29,7 +29,7 @@ def stop_local():
 @pytest.fixture(scope='session')
 def session_capabilities():
   desired_capabilities = merge(CONFIG['environments'][TASK_ID],CONFIG["capabilities"])
-  if "local" in desired_capabilities['bstack:options'] and desired_capabilities['bstack:options']['local']:
+  if "browserstack.local" in desired_capabilities and desired_capabilities['browserstack.local']:
     start_local()
   return desired_capabilities
 

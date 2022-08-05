@@ -1,39 +1,29 @@
 {
     "capabilities": {
-        "bstack:options": {
-            "projectName": "Pytest Browserstack",
-            "buildName": "pytest-browserstack",
-            "sessionName": "parallel_test",
-            "local": false,
-            "debug" : "true",
-            "networkLogs": "true",
-            "seleniumVersion": "3.14.0"
-        }
+        "project": "Pytest Browserstack",
+        "build": "pytest-browserstack",
+        "name": "local_test",
+        "browserstack.local": false,
+        "browserstack.debug": "true",
+        "browserstack.networkLogs": "true",
+        "browserstack.selenium_version": "3.14.0"
     },
     "environments": [
         {
-            "bstack:options": {
-                "os": "Windows",
-                "osVersion": "11"
-            },
+            "os": "Windows",
+            "os_version": "11",
             "browser": "chrome",
-            "browserVersion": "latest"
+            "browser_version": "latest"
         },
         {
-            "bstack:options": {
-                "os" : "OS X",
-                "osVersion" : "Monterey"
-            },
+            "os": "OS X",
+            "os_version": "Monterey",
             "browser": "firefox",
-            "browserVersion": "latest"
+            "browser_version": "latest"
         },
         {
-            "bstack:options": {
-                "osVersion" : "10.0",
-                "deviceName" : "Samsung Galaxy S20"
-            },
-            "browserName": "firefox",
-            "browserVersion": "latest"
+            "os_version": "10.0",
+            "device": "Samsung Galaxy S20"
         }
     ]
 }
