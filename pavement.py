@@ -1,8 +1,8 @@
-from ast import arg
-from asyncio import tasks
-from unittest import case
 from paver.easy import *
 from paver.setuputils import setup
+from multiprocess import Process
+import platform
+import json
 
 setup(
     name = "pytest-browserstack",
@@ -12,21 +12,33 @@ setup(
     description = ("PyTest Integration with BrowserStack"),
     license = "MIT",
     keywords = "example selenium browserstack",
-    url = "https://github.com/browserstack/lettuce-browserstack",
+    url = "https://github.com/browserstack/pytest-browserstack",
     packages=['tests']
 )
 
+def run_py_test(config, task_id=0):
+    if platform.system() == "Windows":
+        sh('cmd /C "set CONFIG_FILE=config/%s.json && set TASK_ID=%s && pytest -s tests/test_%s.py --driver Browserstack"' % (config, task_id, config))
+    else:
+        sh('CONFIG_FILE=config/%s.json TASK_ID=%s pytest -s tests/test_%s.py --driver Browserstack' % (config, task_id, config))
+
 @task
-@consume_nargs(1)    
+@consume_nargs(1)
 def run(args):
     """Run single, local and parallel test using different config."""
-    commands = {
-        "single":'pytest tests/single.py --driver BrowserStack --variables config/single.json',
-        "parallel":'pytest tests/parallel.py -n 3 --driver BrowserStack --variables config/parallel.json',
-        'local':'pytest tests/local/local.py --driver BrowserStack --variables config/local.json'
-    }
-    if commands[args[0]]:
-        sh(commands[args[0]])
-        
-        
-    
+    jobs = []
+    config_file = 'config/%s.json' % (args[0])
+    with open(config_file) as data_file:
+        CONFIG = json.load(data_file)
+    environments = CONFIG['environments']
+    for i in range(len(environments)):
+        p = Process(target=run_py_test, args=(args[0], i))
+        jobs.append(p)
+        p.start()
+
+@task
+def test():
+    """Run all tests"""
+    sh("paver run single")
+    sh("paver run local")
+    sh("paver run parallel")
