@@ -14,7 +14,7 @@ PyTest Integration with BrowserStack.
 * To run single tests, run `paver run single`
 
 ## Running your local tests
-* To run a local test, first go to tests/local_test/conftest.py then edit BROWSERSTACK_ACCESS_KEY on line 8
+* To run a local test, (if you have not set the BROWSERSTACK_ACCESS_KEY environment variable) first go to conftest.py then edit access_key on line 10
 * Run `paver run local`
 
 ## Running your parallel tests
