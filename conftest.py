@@ -1,4 +1,3 @@
-from pprint import pprint
 import pytest
 from browserstack.local import Local
 import os, json
