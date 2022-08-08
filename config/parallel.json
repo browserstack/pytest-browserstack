@@ -2,12 +2,11 @@
     "capabilities": {
         "bstack:options": {
             "projectName": "Pytest Browserstack",
-            "buildName": "pytest-browserstack",
+            "buildName": "browserstack-build-1",
             "sessionName": "parallel_test",
             "local": false,
             "debug" : "true",
-            "networkLogs": "true",
-            "seleniumVersion": "3.14.0"
+            "networkLogs": "true"
         }
     },
     "environments": [
@@ -16,7 +15,7 @@
                 "os": "Windows",
                 "osVersion": "11"
             },
-            "browser": "chrome",
+            "browserName": "chrome",
             "browserVersion": "latest"
         },
         {
@@ -24,7 +23,7 @@
                 "os" : "OS X",
                 "osVersion" : "Monterey"
             },
-            "browser": "firefox",
+            "browserName": "firefox",
             "browserVersion": "latest"
         },
         {

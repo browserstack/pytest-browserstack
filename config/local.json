@@ -2,12 +2,11 @@
   "capabilities": {
       "bstack:options": {
           "projectName": "Pytest Browserstack",
-          "buildName": "pytest-browserstack",
+          "buildName": "browserstack-build-1",
           "sessionName": "local_test",
           "local": true,
           "debug" : "true",
-          "networkLogs": "true",
-          "seleniumVersion": "3.14.0"
+          "networkLogs": "true"
       }
   },
   "environments": [
