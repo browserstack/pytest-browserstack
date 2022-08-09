@@ -1,0 +1,3 @@
+[credentials]
+username = BROWSERSTACK_USERNAME
+key = BROWSERSTACK_ACCESS_KEY
