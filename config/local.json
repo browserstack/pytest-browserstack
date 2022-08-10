@@ -5,8 +5,7 @@
       "name": "local_test",
       "browserstack.local": true,
       "browserstack.debug": "true",
-      "browserstack.networkLogs": "true",
-      "browserstack.selenium_version": "3.14.0"
+      "browserstack.networkLogs": "true"
   },
   "environments": [
       {
