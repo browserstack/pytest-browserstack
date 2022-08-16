@@ -1,0 +1,10 @@
+browserstack-local
+jsonmerge
+multiprocess
+paver
+selenium==3.141.0
+psutil
+pytest
+pytest-variables
+pytest-selenium
+pytest-xdist
