@@ -5,7 +5,7 @@
         "bstack:options": {
             "projectName": "Pytest Browserstack",
             "buildName": "browserstack-build-1",
-            "sessionName": "parallel_test",
+            "sessionName": "Bstack Parallel Test",
             "local": false,
             "debug": "true",
             "networkLogs": "true"

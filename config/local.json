@@ -5,7 +5,7 @@
         "bstack:options": {
             "projectName": "Pytest Browserstack",
             "buildName": "browserstack-build-1",
-            "sessionName": "local_test",
+            "sessionName": "Bstack Local Test",
             "local": true,
             "debug": "true",
             "networkLogs": "true"
