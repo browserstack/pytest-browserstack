@@ -1,8 +1,10 @@
 {
+    "user":"BROWSERSTACK_USERNAME",
+    "key":"BROWSERSTACK_ACCESS_KEY",
     "capabilities": {
         "project": "Pytest Browserstack",
         "build": "browserstack-build-1",
-        "name": "local_test",
+        "name": "BStack pytest sample",
         "browserstack.local": false,
         "browserstack.debug": "true",
         "browserstack.networkLogs": "true"
