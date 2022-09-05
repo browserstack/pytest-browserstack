@@ -10,11 +10,11 @@ PyTest Integration with BrowserStack.
 
 * Clone the repo
 * Install dependencies `pip install -r requirements.txt`
-* To run your automated tests using BrowserStack, you must provide a valid username and access key. This can be done either by using a .browserstack configuration file in the working directory or your home directory, or by setting the BROWSERSTACK_USERNAME and BROWSERSTACK_ACCESS_KEY environment variables.
+* To run your automated tests using BrowserStack, you must provide a valid username and access key. This can be done either by using a .browserstack configuration file in the working directory or your home directory, by setting the BROWSERSTACK_USERNAME and BROWSERSTACK_ACCESS_KEY environment variables, or by adding user & key to config file.
 
 
 ## Running your local tests
-* To run a local test, (if you have not set the BROWSERSTACK_ACCESS_KEY environment variable) first go to conftest.py then edit access_key on line 10
+* To run a local test, (if you have not set the BROWSERSTACK_ACCESS_KEY environment variable) first go to config/local.json then edit key on line 3
 * Run `paver run local`
 
 ## Running your sample tests
