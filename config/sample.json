@@ -5,11 +5,11 @@
         "bstack:options": {
             "projectName": "Pytest Browserstack",
             "buildName": "browserstack-build-1",
+            "sessionName": "BStack pytest sample",
             "local": false,
             "debug": "true",
             "networkLogs": "true"
-        },
-        "name":"BStack pytest sample"
+        }
     },
     "environments": [
         {
