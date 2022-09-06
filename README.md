@@ -17,7 +17,7 @@ PyTest Integration with BrowserStack.
 * To run a local test, (if you have not set the BROWSERSTACK_ACCESS_KEY environment variable) first go to config/local.json then edit key on line 3
 * Run `paver run local`
 
-## Running your sample tests
+## Run your sample tests
 * To run parallel tests, run `paver run sample`
 
  Understand how many parallel sessions you need by using our [Parallel Test Calculator](https://www.browserstack.com/automate/parallel-calculator?ref=github)
