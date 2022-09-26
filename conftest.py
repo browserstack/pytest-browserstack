@@ -29,8 +29,6 @@ def stop_local():
 @pytest.fixture(scope='session')
 def session_capabilities():
   capabilities = merge(CONFIG['environments'][TASK_ID],CONFIG["capabilities"])
-  if capabilities['bstack:options'] and "sessionName" in capabilities['bstack:options']:
-    capabilities['name'] = capabilities["bstack:options"]["sessionName"]
   capabilities['bstack:options']['userName'] = BROWSERSTACK_USERNAME
   capabilities['bstack:options']['accessKey'] = BROWSERSTACK_ACCESS_KEY
   if "local" in capabilities['bstack:options'] and capabilities['bstack:options']['local']:
