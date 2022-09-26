@@ -1,11 +1,13 @@
 {
+    "user": "BROWSERSTACK_USERNAME",
+    "key": "BROWSERSTACK_ACCESS_KEY",
     "capabilities": {
         "bstack:options": {
             "projectName": "Pytest Browserstack",
             "buildName": "browserstack-build-1",
-            "sessionName": "parallel_test",
+            "sessionName": "BStack pytest sample",
             "local": false,
-            "debug" : "true",
+            "debug": "true",
             "networkLogs": "true"
         }
     },
@@ -20,16 +22,16 @@
         },
         {
             "bstack:options": {
-                "os" : "OS X",
-                "osVersion" : "Monterey"
+                "os": "OS X",
+                "osVersion": "Monterey"
             },
             "browserName": "firefox",
             "browserVersion": "latest"
         },
         {
             "bstack:options": {
-                "osVersion" : "10.0",
-                "deviceName" : "Samsung Galaxy S20"
+                "osVersion": "10.0",
+                "deviceName": "Samsung Galaxy S20"
             }
         }
     ]

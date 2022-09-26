@@ -10,7 +10,8 @@ with open(CONFIG_FILE) as data_file:
 
 bs_local = None
 
-BROWSERSTACK_ACCESS_KEY = os.environ['BROWSERSTACK_ACCESS_KEY'] if 'BROWSERSTACK_ACCESS_KEY' in os.environ else None
+BROWSERSTACK_USERNAME = os.environ['BROWSERSTACK_USERNAME'] if 'BROWSERSTACK_USERNAME' in os.environ else CONFIG["user"]
+BROWSERSTACK_ACCESS_KEY = os.environ['BROWSERSTACK_ACCESS_KEY'] if 'BROWSERSTACK_ACCESS_KEY' in os.environ else CONFIG["key"]
 
 def start_local():
     """Code to start browserstack local before start of test."""
@@ -27,10 +28,12 @@ def stop_local():
 
 @pytest.fixture(scope='session')
 def session_capabilities():
-  desired_capabilities = merge(CONFIG['environments'][TASK_ID],CONFIG["capabilities"])
-  if "local" in desired_capabilities['bstack:options'] and desired_capabilities['bstack:options']['local']:
+  capabilities = merge(CONFIG['environments'][TASK_ID],CONFIG["capabilities"])
+  capabilities['bstack:options']['userName'] = BROWSERSTACK_USERNAME
+  capabilities['bstack:options']['accessKey'] = BROWSERSTACK_ACCESS_KEY
+  if "local" in capabilities['bstack:options'] and capabilities['bstack:options']['local']:
     start_local()
-  return desired_capabilities
+  return capabilities
 
 
 def pytest_sessionfinish(session, exitstatus):

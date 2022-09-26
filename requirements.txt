@@ -2,7 +2,7 @@ browserstack-local
 jsonmerge
 multiprocess
 paver
-selenium
+selenium==4.*
 psutil
 pytest
 pytest-variables

@@ -35,10 +35,3 @@ def run(args):
         p = Process(target=run_py_test, args=(args[0], i))
         jobs.append(p)
         p.start()
-
-@task
-def test():
-    """Run all tests"""
-    sh("paver run single")
-    sh("paver run local")
-    sh("paver run parallel")
