@@ -1,18 +1,20 @@
 {
-  "capabilities": {
-      "project": "Pytest Browserstack",
-      "build": "browserstack-build-1",
-      "name": "BStack pytest local",
-      "browserstack.local": true,
-      "browserstack.debug": "true",
-      "browserstack.networkLogs": "true"
-  },
-  "environments": [
-      {
-          "os": "Windows",
-          "os_version": "11",
-          "browser": "Chrome",
-          "browser_version": "latest"
-      }
-  ]
+    "user": "BROWSERSTACK_USERNAME",
+    "key": "BROWSERSTACK_ACCESS_KEY",
+    "capabilities": {
+        "project": "Pytest Browserstack",
+        "build": "browserstack-build-1",
+        "name": "BStack pytest local",
+        "browserstack.local": true,
+        "browserstack.debug": "true",
+        "browserstack.networkLogs": "true"
+    },
+    "environments": [
+        {
+            "os": "Windows",
+            "os_version": "11",
+            "browser": "Chrome",
+            "browser_version": "latest"
+        }
+    ]
 }
