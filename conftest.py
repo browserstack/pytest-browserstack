@@ -31,6 +31,7 @@ def session_capabilities():
   capabilities = merge(CONFIG['environments'][TASK_ID],CONFIG["capabilities"])
   capabilities['bstack:options']['userName'] = BROWSERSTACK_USERNAME
   capabilities['bstack:options']['accessKey'] = BROWSERSTACK_ACCESS_KEY
+  capabilities['bstack:options']['source'] = 'pytest:sample-master:v1.0'
   if "local" in capabilities['bstack:options'] and capabilities['bstack:options']['local']:
     start_local()
   return capabilities
