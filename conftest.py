@@ -31,6 +31,7 @@ def session_capabilities():
   capabilities = merge(CONFIG['environments'][TASK_ID],CONFIG["capabilities"])
   capabilities['browserstack.user'] = BROWSERSTACK_USERNAME
   capabilities['browserstack.key'] = BROWSERSTACK_ACCESS_KEY
+  capabilities['browserstack.source'] = 'pytest:sample-selenium-3:v1.0'
   if "browserstack.local" in capabilities and capabilities['browserstack.local']:
     start_local()
   return capabilities
