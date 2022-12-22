@@ -1,10 +1,8 @@
 browserstack-local
 jsonmerge
-multiprocess
-paver
 selenium==4.*
 psutil
 pytest
 pytest-variables
 pytest-selenium
-pytest-xdist
+browserstack-sdk

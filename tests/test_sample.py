@@ -1,5 +1,3 @@
-from browserstack.local import Local
-from selenium import webdriver
 import pytest
 from selenium.webdriver.common.by import By
 
@@ -18,8 +16,5 @@ def test_example(selenium):
     # locating product in cart and getting name of the product in cart
     productCartText = selenium.find_element(By.XPATH, '//*[@id="__next"]/div/div/div[2]/div[2]/div[2]/div/div[3]/p[1]').text
 
-    # checking whether product has been added to cart by comparing product name and marking test pass or fail
-    if productText == productCartText:
-        selenium.execute_script('browserstack_executor: {"action": "setSessionStatus", "arguments": {"status":"passed","reason": "Test Passed Successfully"}}')
-    else:
-        selenium.execute_script('browserstack_executor: {"action": "setSessionStatus", "arguments": {"status":"failed","reason": "Product added to the cart not same as selected"}}')
+    # checking whether product has been added to cart by comparing product name
+    assert productCartText == productText
