@@ -1,6 +1,6 @@
 # PyTest with Browserstack
 
-PyTest Integration with BrowserStack.
+PyTest Integration with BrowserStack using SDK.
 
 ![BrowserStack Logo](https://d98b8t1nnulk5.cloudfront.net/production/images/layout/logo-header.png?1469004780)
 ## Prerequisite
@@ -8,19 +8,21 @@ PyTest Integration with BrowserStack.
 
 ## Setup
 
-* Clone the repo
+* Clone the repo with `git clone -b sdk https://github.com/browserstack/pytest-browserstack.git`
 * Install dependencies `pip install -r requirements.txt`
-* To run your automated tests using BrowserStack, you must provide a valid username and access key. This can be done either by using a .browserstack configuration file in the working directory or your home directory, by setting the BROWSERSTACK_USERNAME and BROWSERSTACK_ACCESS_KEY environment variables, or by adding user & key to config file.
+* To run your automated tests using BrowserStack, you must provide a valid username and access key. This can be done either by providing your username and access key in the `browserstack.yml` configuration file, or by setting the `BROWSERSTACK_USERNAME` and `BROWSERSTACK_ACCESS_KEY` environment variables.
 
+## Run sample test in parallel:
+* To run the sample test across platforms defined in the configuration file run:
+```
+  browserstack-sdk pytest -s tests/test_sample.py
+```
 
-## Run tests on locally hosted websites
-* To run a local test, (if you have not set the BROWSERSTACK_ACCESS_KEY environment variable) first go to config/local.json then edit key on line 3
-* Run `paver run local`
-
-## Run sample tests
-* To run parallel tests, run `paver run sample`
-
- Understand how many parallel sessions you need by using our [Parallel Test Calculator](https://www.browserstack.com/automate/parallel-calculator?ref=github)
+## Run a sample local test:
+* To run the sample local test across platforms defined in the configuration file, you just need to set `browserstackLocal` key as true in the `browserstack.yml` file and run:
+```
+  browserstack-sdk pytest -s tests/test_local.py
+```
 
 ## Notes
 * You can view your test results on the [BrowserStack Automate dashboard](https://www.browserstack.com/automate)
