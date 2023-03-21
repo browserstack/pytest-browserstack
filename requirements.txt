@@ -8,3 +8,5 @@ pytest
 pytest-variables
 pytest-selenium
 pytest-xdist
+pytest-timeout
+
