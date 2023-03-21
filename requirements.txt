@@ -5,4 +5,5 @@ psutil
 pytest
 pytest-variables
 pytest-selenium
+pytest-timeout
 browserstack-sdk
