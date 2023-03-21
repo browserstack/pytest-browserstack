@@ -18,9 +18,9 @@ setup(
 
 def run_py_test(config, task_id=0):
     if platform.system() == "Windows":
-        sh('cmd /C "set CONFIG_FILE=config/%s.json && set TASK_ID=%s && pytest -s tests/test_%s.py --driver Browserstack"' % (config, task_id, config))
+        sh('cmd /C "set CONFIG_FILE=config/%s.json && set TASK_ID=%s && pytest -s tests/test_%s.py --driver Browserstack --timeout 120"' % (config, task_id, config))
     else:
-        sh('CONFIG_FILE=config/%s.json TASK_ID=%s pytest -s tests/test_%s.py --driver Browserstack' % (config, task_id, config))
+        sh('CONFIG_FILE=config/%s.json TASK_ID=%s pytest -s tests/test_%s.py --driver Browserstack --timeout 120' % (config, task_id, config))
 
 @task
 @consume_nargs(1)
