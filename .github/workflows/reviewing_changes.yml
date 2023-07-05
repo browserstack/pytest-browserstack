@@ -60,10 +60,10 @@ jobs:
         run: python -m pip install -r requirements.txt
 
       - name: run tests in parallel
-        run: browserstack-sdk pytest -s tests/test.py
+        run: browserstack-sdk pytest -s tests/bstack-sample-test.py
 
       - name: run local tests in parallel
-        run: browserstack-sdk pytest -s tests/local-test.py
+        run: browserstack-sdk pytest -s tests/bstack-local-test.py
 
       - if: always()
         uses: actions/github-script@98814c53be79b1d30f795b907e553d8679345975
