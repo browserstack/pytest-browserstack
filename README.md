@@ -21,13 +21,13 @@ PyTest Integration with BrowserStack using SDK.
 ## Run sample test in parallel:
 * To run the sample test across platforms defined in the configuration file run:
 ```
-  browserstack-sdk pytest -s tests/test.py
+  browserstack-sdk pytest -s tests/bstack-sample-test.py
 ```
 
 ## Run a sample local test:
 * To run the sample local test across platforms defined in the configuration file, you just need to set `browserstackLocal` key as true in the `browserstack.yml` file and run:
 ```
-  browserstack-sdk pytest -s tests/local-test.py
+  browserstack-sdk pytest -s tests/bstack-local-test.py
 ```
 
 ## Notes
