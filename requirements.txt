@@ -5,4 +5,4 @@ psutil
 pytest
 pytest-variables
 pytest-selenium
-browserstack-sdk
+browserstack-sdk==1.15.1
