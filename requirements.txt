@@ -1,6 +1,6 @@
 browserstack-local
 jsonmerge
-selenium==4.*
+selenium==4.11.2
 psutil
 pytest
 pytest-variables
