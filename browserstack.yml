@@ -13,7 +13,7 @@ accessKey: YOUR_ACCESS_KEY
 # Set 'projectName' to the name of your project. Example, Marketing Website
 projectName: BrowserStack Samples 
 # Set `buildName` as the name of the job / testsuite being run
-buildName: browserstack build
+buildName: $(BROWSERSTACK_BUILD_NAME)
 # `buildIdentifier` is a unique id to differentiate every execution that gets appended to
 # buildName. Choose your buildIdentifier format from the available expressions:
 # ${BUILD_NUMBER} (Default): Generates an incremental counter with every execution
@@ -59,7 +59,7 @@ parallelsPerPlatform: 1
 # ==========================================
 # Set browserStackLocal to true if your website under test is not accessible publicly over the internet
 # Learn more about how BrowserStack Local works here -> https://www.browserstack.com/docs/automate/selenium/local-testing-introduction
-browserstackLocal: true # <boolean> (Default false)
+browserstackLocal: false # <boolean> (Default false)
 # browserStackLocalOptions:
 # Options to be passed to BrowserStack local in-case of advanced configurations
   # localIdentifier: # <string> (Default: null) Needed if you need to run multiple instances of local.
