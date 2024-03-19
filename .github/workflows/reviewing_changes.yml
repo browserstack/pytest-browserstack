@@ -66,6 +66,7 @@ jobs:
           curl -o staging_package.tgz "$PACKAGE_URL"
           python -m pip uninstall browserstack-sdk -y
           python -m pip install staging_package.tgz
+        shell: bash
 
       - name: run tests in parallel
         run: browserstack-sdk pytest -s tests/bstack-sample-test.py
