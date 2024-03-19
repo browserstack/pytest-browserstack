@@ -64,7 +64,7 @@ jobs:
         run: |
           echo 'Installing staging tar.gz'
           curl -o staging_package.tgz "$PACKAGE_URL"
-          python -m pip uninstall browserstack-sdk
+          python -m pip uninstall browserstack-sdk -y
           python -m pip install staging_package.tgz
 
       - name: run tests in parallel
