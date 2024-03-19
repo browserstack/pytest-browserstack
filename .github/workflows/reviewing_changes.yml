@@ -9,6 +9,9 @@ on:
       commit_sha:
         description: 'The full commit id to build'
         required: true
+      package_url:
+        description: 'Staging package url'
+        required: false
 
 jobs:
   comment-run:
@@ -17,12 +20,13 @@ jobs:
       fail-fast: false
       max-parallel: 3
       matrix:
-        python: ['3.7', '3.10', '3.11']
+        python: ['3.9.6']
         os: [ macos-latest, windows-latest, ubuntu-latest ]
     name: Pytest Repo ${{ matrix.python }} - ${{ matrix.os }} Sample
     env:
       BROWSERSTACK_USERNAME: ${{ secrets.BROWSERSTACK_USERNAME }}
       BROWSERSTACK_ACCESS_KEY: ${{ secrets.BROWSERSTACK_ACCESS_KEY }}
+      PACKAGE_URL: ${{ github.event.inputs.package_url }}
 
     steps:
       - uses: actions/checkout@v3
@@ -54,6 +58,15 @@ jobs:
 
       - name: Install dependencies
         run: python -m pip install -r requirements.txt
+      
+      - name: Install staging browserstack-sdk package
+        if: ${{ github.event.inputs.package_url != '' }}
+        run: |
+          echo 'Installing staging tar.gz'
+          curl -o staging_package.tgz "$PACKAGE_URL"
+          python -m pip uninstall browserstack-sdk -y
+          python -m pip install staging_package.tgz
+        shell: bash
 
       - name: run tests in parallel
         run: browserstack-sdk pytest -s tests/bstack-sample-test.py
