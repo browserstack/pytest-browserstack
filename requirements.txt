@@ -2,7 +2,7 @@ browserstack-local
 jsonmerge
 selenium==4.*
 psutil
-pytest
+pytest==8.0.2
 pytest-variables
 pytest-selenium
 browserstack-sdk==1.19.20
