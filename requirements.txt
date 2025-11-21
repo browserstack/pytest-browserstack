@@ -1,3 +1,4 @@
+browserstack-local
 selenium>=3.14
 pytest==7.4.4
 pytest-selenium
