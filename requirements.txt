@@ -1,5 +1,5 @@
 browserstack-local
 selenium>=3.14
-pytest==7.4.4
+pytest==9.0.3
 pytest-selenium
 browserstack-sdk @ https://sdk-assets.browserstack.com/python/browserstack_sdk-latest.tar.gz
